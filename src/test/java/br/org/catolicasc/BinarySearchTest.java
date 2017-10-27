@@ -8,8 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BinarySearchTest {
 
-    private final int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
-    private final int[] emptyValues = {};
+    private final int[]
+            values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 },
+            emptyValues = {};
 
     @Test
     void testRecursiveSearch() {
