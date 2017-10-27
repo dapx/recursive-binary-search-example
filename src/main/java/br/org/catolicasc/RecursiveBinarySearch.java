@@ -1,7 +1,5 @@
 package br.org.catolicasc;
 
-import java.util.Arrays;
-
 /**
  * Class to perform a binary search into an integer array to find an element specified.
  */
