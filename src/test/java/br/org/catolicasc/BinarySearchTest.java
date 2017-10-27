@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BinarySearchTest {
 
     private final int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+    private final int[] emptyValues = {};
 
     @Test
     void testRecursiveSearch() {
@@ -18,9 +19,22 @@ public class BinarySearchTest {
     }
 
     @Test
+    void testEmptyRecursiveSearch() {
+        int index = new RecursiveBinarySearch(10, emptyValues)
+                .search();
+        assertEquals(-1, index);
+    }
+
+    @Test
     void testNormalSearch() {
         int index  = BinarySearch.indexOf(values, 10);
         assertEquals(9, index);
+    }
+
+    @Test
+    void testEmptyNormalSearch() {
+        int index  = BinarySearch.indexOf(emptyValues, 10);
+        assertEquals(-1, index);
     }
 
 }
