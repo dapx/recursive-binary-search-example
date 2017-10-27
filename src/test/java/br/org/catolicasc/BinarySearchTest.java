@@ -12,6 +12,8 @@ public class BinarySearchTest {
             values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 },
             emptyValues = {};
 
+    private final int NOT_FOUND = -1;
+
     @Test
     void testRecursiveSearch() {
         int index = new RecursiveBinarySearch(10, values)
@@ -23,7 +25,7 @@ public class BinarySearchTest {
     void testEmptyRecursiveSearch() {
         int index = new RecursiveBinarySearch(10, emptyValues)
                 .search();
-        assertEquals(-1, index);
+        assertEquals(NOT_FOUND, index);
     }
 
     @Test
@@ -35,7 +37,7 @@ public class BinarySearchTest {
     @Test
     void testEmptyNormalSearch() {
         int index  = BinarySearch.indexOf(emptyValues, 10);
-        assertEquals(-1, index);
+        assertEquals(NOT_FOUND, index);
     }
 
 }
